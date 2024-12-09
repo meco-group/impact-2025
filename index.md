@@ -21,15 +21,15 @@ bin_picking_video_id: iULN3skmdjs
 
 ### Overview
 
-In this workshop, participants will engage in hands-on exploration of optimal control problems (OCPs) applied to motion planning and model predictive control (MPC) in autonomous robotic systems. By engaging with cutting-edge tools and techniques, participants will develop the skills necessary to navigate complex environments, optimize trajectory paths, and execute tasks with precision and efficiency in robotic systems.
+In this workshop, participants will engage in hands-on exploration of model predictive control applied to mechatronic systems. By engaging with cutting-edge tools and techniques, participants will develop the skills necessary to configure and deploy model predictive controllers on real hardware.
 
 To streamline the guided exercises, the workshop makes use of the free and open-source [Rockit](https://gitlab.kuleuven.be/meco-software/rockit) [1] and [Impact](https://gitlab.kuleuven.be/meco-software/impact) [2][3] software frameworks developed by the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) at KU Leuven and built on top of the numerical optimization framework [CasADi](https://github.com/casadi/casadi) [4], designed for efficient nonlinear programming. 
 
 Exercises will be mainly in Python and Matlab. Attendees can later adopt the presented open-source software frameworks in their research.
 
-While foundational concepts of OCPs will be introduced, the course focuses on learning-by-doing. The course prioritizes practical know-how, enabling participants to directly apply Impact to tackle real-world control challenges.
+While foundational concepts of nonlinear programming, optimal control and model predictive control will be briefly introduced, the course focuses on learning-by-doing. The course prioritizes practical know-how, enabling participants to directly apply Impact to tackle real-world control challenges.
 
-This workshop is organized by members of the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) of KU Leuven, Belgium. The MECO Research Team focusses on modeling, estimation, identification, analysis and optimal control of motion and motion systems such as mechatronic systems or machine tools. It combines theoretical contributions (development of design methodologies) with experimental knowhow (implementation and experimental validation on lab-scale as well as industrial setups). The theoretical research benefits from the group's expertise on numerical optimization, especially convex optimization. 
+This workshop is organized by members of the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) of Flanders Make@KU Leuven, Belgium. The MECO Research Team focusses on modeling, estimation, identification, analysis and optimal control of motion and motion systems such as mechatronic systems or machine tools. It combines theoretical contributions (development of design methodologies) with experimental knowhow (implementation and experimental validation on lab-scale as well as industrial setups). The theoretical research benefits from the group's expertise on numerical optimization, especially convex optimization. 
 
 The following videos show previous works developed by the MECO Research Team using the software tools that will be used in this workshop:
 
