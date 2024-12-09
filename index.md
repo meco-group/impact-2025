@@ -29,7 +29,7 @@ Exercises will be mainly in Python and Matlab. Attendees can later adopt the pre
 
 While foundational concepts of nonlinear programming, optimal control and model predictive control will be briefly introduced, the course focuses on learning-by-doing. The course prioritizes practical know-how, enabling participants to directly apply Impact to tackle real-world control challenges.
 
-This workshop is organized by members of the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) of Flanders Make@KU Leuven, Belgium. The MECO Research Team focusses on modeling, estimation, identification, analysis and optimal control of motion and motion systems such as mechatronic systems or machine tools. It combines theoretical contributions (development of design methodologies) with experimental knowhow (implementation and experimental validation on lab-scale as well as industrial setups). The theoretical research benefits from the group's expertise on numerical optimization, especially convex optimization. 
+This workshop is organized by members of the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) of core lab MPRO, Flanders Make@KU Leuven, in collaboration with core lab MotionS, Flanders Make. The MECO Research Team focusses on modeling, estimation, identification, analysis and optimal control of motion and motion systems such as mechatronic systems or machine tools. It combines theoretical contributions (development of design methodologies) with experimental knowhow (implementation and experimental validation on lab-scale as well as industrial setups). The theoretical research benefits from the group's expertise on numerical optimization, especially convex optimization. 
 
 The following videos show previous works developed by the MECO Research Team using the software tools that will be used in this workshop:
 
@@ -38,8 +38,6 @@ The following videos show previous works developed by the MECO Research Team usi
 {% include youtubePlayer.html id=page.drone_racing_video_id %}
 
 {% include youtubePlayer.html id=page.bin_picking_video_id %}
-
-The MECO Research Team is part of Flanders Make, the strategic research centre for the manufacturing industry.
 
 ### Registration
 
@@ -66,10 +64,13 @@ Use the following button to register:
 
 ### Organizers
 
-This workshop is organized (and its content has been created) by five members of the MECO Research Team of Flanders Make@KU Leuven, Belgium: 
+This workshop is organized (and its content has been created) by: 
 
 [Alvaro Florez](https://www.mech.kuleuven.be/en/pma/research/meco/people/00142153)  
 Doctoral researcher
+
+[Branimir Mrak](https://www.linkedin.com/in/branimir-mrak)  
+Senior Research Engineer
 
 [David Kiessling](https://www.mech.kuleuven.be/en/pma/research/meco/people/00140695)  
 Doctoral researcher
