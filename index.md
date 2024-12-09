@@ -47,7 +47,7 @@ Due to capacity constraints at the venue of the workshop, we kindly ask all part
 
 **Lunch will be provided during the workshop**.
 
-Use the following button to register:
+Use the following button to register. *Registration will open in January 2025.*
 
 <a href="javascript:void(0)" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 disabled" target="_blank " disabled>Click here to register for the workshop</a>
 
