@@ -32,7 +32,7 @@ days:
         title: Break
       - time: 15:15 to 15:45
         title: NN-MPC
-        subtitle: ...
+        subtitle: Neural Network approximated MPC
         category: Practical
       - time: 15:45 to 16:00
         title: Concluding remarks
