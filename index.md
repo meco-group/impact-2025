@@ -17,16 +17,6 @@ bin_picking_video_id: iULN3skmdjs
 [Venue](#venue){: .btn .btn-primary .d-lg-inline-block my-lg-0 my-2 mx-lg-2 .mt-1}
 [Relevant repositories](#relevant-repositories){: .btn .btn-primary .d-lg-inline-block my-lg-0 .mt-1}
 
-<!-- <div class="btn-group-md mt-4 mb-3" role="group">
-    <a href="#registration" type="button" class="btn btn-primary d-lg-inline-block my-lg-0" target="_blank">Registration</a>
-    <a href="#important-dates" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 my-2 mx-lg-2" target="_blank">Important dates</a>
-    <a href="#organizers" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 my-2 mx-lg-2" target="_blank">Organizers</a>
-    <a href="#program" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 my-2 mx-lg-2" target="_blank">Program</a>
-    <a href="#venue" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 my-2 mx-lg-2" target="_blank">Venue</a>
-    <a href="#relevant-repositories" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 my-2 mx-lg-2" target="_blank">Relevant repositories</a>
-    <a href="#contact" type="button" class="btn btn-primary d-lg-inline-block my-lg-0" target="_blank">Contact</a>
-</div> -->
-
 ***
 
 ### Overview
