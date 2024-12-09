@@ -1,7 +1,7 @@
 ---
 # layout: index
 layout: landing
-description: Workshop on optimal control problems and model predictive control for autonomous systems
+description: Workshop on model predictive control for mechatronic systems
 truck_trailer_video_id: SBNwXVDfLDg
 drone_racing_video_id: bEeHD49rx20
 bin_picking_video_id: iULN3skmdjs
@@ -50,39 +50,15 @@ The following videos show previous works developed by the MECO Research Team usi
 
 {% include youtubePlayer.html id=page.bin_picking_video_id %}
 
-
-This workshop has received funding from the *MIT-Belgium - KU Leuven Seed Fund* within the framework of the *MIT International Science and Technology Initiatives (MISTI)* grant programme. The MECO Research Team is part of Flanders Make, the strategic research centre for the manufacturing industry.
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm">
-        <figure>
-            <img src="assets/images/MISTI_logo.png" height="75px" alt="" />
-        </figure>
-    </div>
-    <div class="col-sm">
-        <figure>
-            <img src="assets/images/MIT_logo.png" height="75px" alt="" />
-        </figure>
-    </div>
-    <div class="col-sm">
-        <figure>
-            <img src="assets/images/fmkuleuven.png" height="75px" alt="" />
-        </figure>
-    </div>
-  </div>
-</div>
-
-
-***
+The MECO Research Team is part of Flanders Make, the strategic research centre for the manufacturing industry.
 
 ### Registration
 
 Due to capacity constraints at the venue of the workshop, we kindly ask all participants to register their participation. 
 
-**Participation at the workshop is free of charge, but registration is compulsory**, and **limited to staff/students/researchers/professors/others associated to MIT or KU Leuven**. Please contact the organizers in case you have any question.
+**Participation at the workshop is free of charge, but registration is compulsory**. Please contact the organizers in case you have any question.
 
-**Lunch will be provided during the two days of the workshop**.
+**Lunch will be provided during the workshop**.
 
 Use the following button to register:
 
@@ -95,29 +71,29 @@ Use the following button to register:
 
 ### Important dates
 
-- Registration deadline: July 12th, 2024 (AoE)
-- Workshop dates: July 16th and 17th, 2024.
+- Registration deadline: February 14, 2025 (AoE)
+- Workshop date: February 27, 2025
 
 ***
 
 ### Organizers
 
-This workshop is organized (and its content has been created) by five members of the MECO Research Team of KU Leuven, Belgium: 
+This workshop is organized (and its content has been created) by five members of the MECO Research Team of Flanders Make@KU Leuven, Belgium: 
 
-[Alejandro Astudillo](https://www.mech.kuleuven.be/en/pma/research/meco/people/00124760)  
-Postdoctoral researcher
+[Alvaro Florez](https://www.mech.kuleuven.be/en/pma/research/meco/people/00142153)  
+Doctoral researcher
+
+[David Kiessling](https://www.mech.kuleuven.be/en/pma/research/meco/people/00140695)  
+Doctoral researcher
+
+[Jan Swevers](https://www.mech.kuleuven.be/en/pma/research/meco/people/00015548)  
+Professor
+
+[Joris Gillis](https://www.mech.kuleuven.be/en/pma/research/meco/people/00052373)  
+Research expert
 
 [Wilm Decré](https://www.mech.kuleuven.be/en/pma/research/meco/people/00052672)  
 Research manager
-
-[Louis Callens](https://www.mech.kuleuven.be/en/pma/research/meco/people/00143705)  
-Doctoral researcher
-
-[Alex Gonzalez García](https://www.mech.kuleuven.be/en/pma/research/meco/people/00159546)  
-Doctoral researcher
-
-[Dries Dirckx](https://www.mech.kuleuven.be/en/pma/research/meco/people/00110021)  
-Doctoral researcher
 
 ***
 
@@ -125,7 +101,7 @@ Doctoral researcher
 
 You can reach the organizers for any questions by contacting them at:
 
-    alejandro.astudillovigoya < at > kuleuven.be
+    wilm.decre < at > kuleuven.be
 
 *** 
 
