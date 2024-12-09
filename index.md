@@ -25,10 +25,9 @@ In this workshop, participants will engage in hands-on exploration of optimal co
 
 To streamline the guided exercises, the workshop makes use of the free and open-source [Rockit](https://gitlab.kuleuven.be/meco-software/rockit) [1] and [Impact](https://gitlab.kuleuven.be/meco-software/impact) [2][3] software frameworks developed by the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) at KU Leuven and built on top of the numerical optimization framework [CasADi](https://github.com/casadi/casadi) [4], designed for efficient nonlinear programming. 
 
-Exercises will be mainly in Python, and Docker images containing a development and simulation environment will be provided. Attendees can later adopt the presented open-source software frameworks in their research.
+Exercises will be mainly in Python and Matlab. Attendees can later adopt the presented open-source software frameworks in their research.
 
-While foundational concepts of OCPs will be introduced, the course focuses on learning-by-doing. The course prioritizes practical know-how, enabling participants to directly apply Rockit and Impact to tackle real-world robotic challenges. The attendees will learn to formulate and solve OCPs, gaining valuable experience in implementing trajectory optimization algorithms and MPC strategies. Moreover, participants will learn **how to swiftly deploy OCPs and MPCs in C, Python and ROS 2**.
-
+While foundational concepts of OCPs will be introduced, the course focuses on learning-by-doing. The course prioritizes practical know-how, enabling participants to directly apply Impact to tackle real-world control challenges.
 
 This workshop is organized by members of the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) of KU Leuven, Belgium. The MECO Research Team focusses on modeling, estimation, identification, analysis and optimal control of motion and motion systems such as mechatronic systems or machine tools. It combines theoretical contributions (development of design methodologies) with experimental knowhow (implementation and experimental validation on lab-scale as well as industrial setups). The theoretical research benefits from the group's expertise on numerical optimization, especially convex optimization. 
 
@@ -51,7 +50,6 @@ Due to capacity constraints at the venue of the workshop, we kindly ask all part
 **Lunch will be provided during the workshop**.
 
 Use the following button to register:
-
 
 <a href="javascript:void(0)" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 disabled" target="_blank " disabled>Click here to register for the workshop</a>
 
@@ -94,5 +92,4 @@ You can reach the organizers for any questions by contacting them at:
     wilm.decre < at > kuleuven.be
 
 *** 
-
 ### Relevant repositories
