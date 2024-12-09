@@ -1,7 +1,7 @@
 content:
   title: Program
   description: Schedule of talks and activities
-  text: Tentative. In Eastern Daylight Time (GMT-4; Cambridge, MA Time).
+  text: Tentative.
 
 legend:
   title: Legend
@@ -16,52 +16,25 @@ legend:
 days:
   - name: Day 1
     events:
-      - time: 10:00 to 10:15
-        title: Overview of the workshop
-        subtitle: Short introduction to the content of the workshop
+      - time: 12:00 to 13:00
+        title: Lunch
+        subtitle: 
         category: General
-      - time: 10:15 to 11:15
-        title: Introduction to nonlinear programming
+      - time: 13:00 to 13:30
+        title: Introduction to nonlinear programming, optimal control and model predictive control
         subtitle: Preliminary concepts on specifying and solving nonlinear programming problems
         category: Theoretical
-      - time: 11:15 to 12:15
-        title: Tutorial on CasADi and its Opti stack
-        subtitle: How to efficiently define expressions, functions and nonlinear programs with the numerical optimization framework CasADi
+      - time: 13:30 to 15:00
+        title: Tutorial on Impact
+        subtitle: How to easily specify, prototype and deploy model predictive controllers
         category: Practical
-      - time: 12:15 to 13:15
-        title: Lunch break
-      - time: 13:15 to 14:15
-        title: Introduction to nonlinear optimal control
-        subtitle: How to formulate optimal control problems using different transcription methods and integrators
-        category: Theoretical
-      - time: 14:15 to 15:15
-        title: Tutorial on Rockit (Part 1)
-        subtitle: How to easily specify and prototype optimal control problems using different solvers
+      - time: 15:00 to 15:15
+        title: Break
+      - time: 15:15 to 15:45
+        title: NN-MPC
+        subtitle: ...
         category: Practical
-  - name: Day 2
-    events:
-      - time: 10:00 to 10:15
-        title: Introduction to second day
-        subtitle: Short introduction to the content of the second day of the workshop
+      - time: 15:45 to 16:00
+        title: Concluding remarks
         category: General
-      - time: 10:15 to 11:15
-        title: Tutorial on Rockit (Part 2)
-        subtitle: How to easily specify and prototype optimal control problems using different solvers
-        category: Practical
-      - time: 11:15 to 11:30
-        title: Introduction to nonlinear MPC
-        subtitle: Short introduction on going from an optimal control problem to a model predictive controller
-        category: Theoretical
-      - time: 11:30 to 12:15
-        title: Tutorial and interactive session on Impact (Part 1)
-        subtitle: How to easily specify, prototype and deploy MPC for robotic systems in C, Python, and ROS 2
-        category: Practical
-      - time: 12:15 to 13:15
-        title: Lunch break
-      - time: 13:15 to 15:00
-        title: Tutorial and interactive session on Impact (Part 2)
-        subtitle: How to easily specify, prototype and deploy MPC for robotic systems in C, Python, and ROS 2
-        category: Practical
-      - time: 15:00 to 15:10
-        title: Closing
-        category: General
+
