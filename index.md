@@ -49,7 +49,7 @@ Due to capacity constraints at the venue of the workshop, we kindly ask all part
 
 Use the following button to register. Registration will close on Friday, February 7.
 
-<a href="javascript:void(0)" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 disabled" target="https://forms.office.com/e/P4ikS0FxaN" enabled>Click here to register for the workshop</a>
+<a href="javascript:void(0)" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 disabled" target="[blank](https://forms.office.com/e/P4ikS0FxaN)" enabled>Click here to register for the workshop</a>
 
 **Your registration will be completed only after you receive a confirmation email from the organizers.**
 
@@ -57,7 +57,7 @@ Use the following button to register. Registration will close on Friday, Februar
 
 ### Important dates
 
-- Registration deadline: February 14, 2025 (AoE)
+- Registration deadline: February 7, 2025 (AoE)
 - Workshop date: February 27, 2025
 
 ***
