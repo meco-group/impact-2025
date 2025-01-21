@@ -3,7 +3,8 @@
 layout: landing
 description: Workshop on model predictive control for mechatronic systems using Impact
 truck_trailer_video_id: SBNwXVDfLDg
-drone_racing_video_id: bEeHD49rx20
+xplanar_video_id: zhZ2Ko5VxUk
+# drone_racing_video_id: bEeHD49rx20
 bin_picking_video_id: iULN3skmdjs
 ---
 
@@ -13,9 +14,9 @@ bin_picking_video_id: iULN3skmdjs
 [Organizers](#organizers){: .btn .btn-primary .d-lg-inline-block my-lg-0 my-2 mx-lg-2 .mt-1}
 [Contact](#contact){: .btn .btn-primary .d-lg-inline-block my-lg-0 .mt-1} 
  
+[Relevant repositories](#relevant-repositories){: .btn .btn-primary .d-lg-inline-block my-lg-0 .mt-1}
 [Program](#program){: .btn .btn-primary .d-lg-inline-block my-lg-0 .mt-1}
 [Venue](#venue){: .btn .btn-primary .d-lg-inline-block my-lg-0 my-2 mx-lg-2 .mt-1}
-[Relevant repositories](#relevant-repositories){: .btn .btn-primary .d-lg-inline-block my-lg-0 .mt-1}
 
 ***
 
@@ -23,9 +24,9 @@ bin_picking_video_id: iULN3skmdjs
 
 In this workshop, participants will engage in hands-on exploration of model predictive control applied to mechatronic systems. By engaging with cutting-edge tools and techniques, participants will develop the skills necessary to configure and deploy model predictive controllers on real hardware.
 
-To streamline the guided exercises, the workshop makes use of the free and open-source [Rockit](https://gitlab.kuleuven.be/meco-software/rockit) [1] and [Impact](https://gitlab.kuleuven.be/meco-software/impact) [2][3] software frameworks developed by the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) at KU Leuven and built on top of the numerical optimization framework [CasADi](https://github.com/casadi/casadi) [4], designed for efficient nonlinear programming. 
+To streamline the guided exercises, the workshop makes use of the free and open-source [Rockit](https://gitlab.kuleuven.be/meco-software/rockit) [1] and [Impact](https://gitlab.kuleuven.be/meco-software/impact) [2][3] software frameworks developed by the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) at KU Leuven and built on top of the numerical optimization framework [CasADi](https://web.casadi.org/) [4], designed for efficient nonlinear programming. 
 
-Exercises will be mainly in Python and Matlab. Attendees can later adopt the presented open-source software frameworks in their research.
+Exercises will be mainly in Python and Matlab. Attendees can later adopt the presented open-source software frameworks in their research/applications.
 
 While foundational concepts of nonlinear programming, optimal control and model predictive control will be briefly introduced, the course focuses on learning-by-doing. The course prioritizes practical know-how, enabling participants to directly apply Impact to tackle real-world control challenges.
 
@@ -35,17 +36,15 @@ The following videos show previous works developed by the MECO Research Team usi
 
 {% include youtubePlayer.html id=page.truck_trailer_video_id %}
 
-{% include youtubePlayer.html id=page.drone_racing_video_id %}
+{% include youtubePlayer.html id=page.xplanar_video_id %}
 
 {% include youtubePlayer.html id=page.bin_picking_video_id %}
 
 ### Registration
 
-Due to capacity constraints at the venue of the workshop, we kindly ask all participants to register their participation. 
+**Participation at the workshop is free of charge, but registration is compulsory**. Please contact the organizers in case you have any questions.
 
-**Participation at the workshop is free of charge, but registration is compulsory**. Please contact the organizers in case you have any question.
-
-**Lunch will be provided during the workshop**.
+Lunch will be provided during the workshop.
 
 Use the following button to register. Registration will close on Friday, February 7.
 
@@ -57,7 +56,7 @@ Use the following button to register. Registration will close on Friday, Februar
 
 ### Important dates
 
-- Registration deadline: February 7, 2025 (AoE)
+- Registration deadline: February 7, 2025
 - Workshop date: February 27, 2025
 
 ***
@@ -88,9 +87,9 @@ Research manager
 
 ### Contact
 
-You can reach the organizers for any questions by contacting them at:
+For any questions, please feel free to contact the organizers at:
 
-    wilm.decre < at > kuleuven.be
+    wilm.decre <at> kuleuven.be
 
 *** 
 ### Relevant repositories
