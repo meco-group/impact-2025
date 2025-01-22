@@ -24,7 +24,9 @@ bin_picking_video_id: iULN3skmdjs
 
 In this workshop, participants will engage in hands-on exploration of model predictive control applied to mechatronic systems. By engaging with cutting-edge tools and techniques, participants will develop the skills necessary to configure and deploy model predictive controllers on real hardware.
 
-To streamline the guided exercises, the workshop makes use of the free and open-source [Rockit](https://gitlab.kuleuven.be/meco-software/rockit) [1] and [Impact](https://gitlab.kuleuven.be/meco-software/impact) [2][3] software frameworks developed by the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) at KU Leuven and built on top of the numerical optimization framework [CasADi](https://web.casadi.org/) [4], designed for efficient nonlinear programming. 
+To streamline the guided exercises, the workshop makes use of the free and open-source [Rockit](https://gitlab.kuleuven.be/meco-software/rockit) [1] and [Impact](https://gitlab.kuleuven.be/meco-software/impact) [2][3] software frameworks developed by the [MECO Research Team](https://www.mech.kuleuven.be/en/pma/research/meco) at KU Leuven and built on top of the numerical optimization framework [CasADi](https://web.casadi.org/) [4], designed for efficient nonlinear programming. These frameworks offer to the control engineer a simple unified frontend to tap into high performance solvers like fatrop, acados, and grampc. The architecture of Impact is given below.
+
+<img src="./assets/images/impact.png" alt="image info" style="max-width: 100%; height: auto;">
 
 Exercises will be mainly in Python and Matlab. Attendees can later adopt the presented open-source software frameworks in their research/applications.
 
