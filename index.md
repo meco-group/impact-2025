@@ -48,9 +48,7 @@ The following videos show previous works developed by the MECO Research Team usi
 
 Lunch will be provided during the workshop.
 
-Use the following button to register. Registration will close on Friday, February 7.
-
-<a href="https://forms.office.com/e/P4ikS0FxaN" type="button" class="btn btn-primary d-lg-inline-block my-lg-0" target="_blank">Click here to register for the workshop</a>
+<a href="https://forms.office.com/e/P4ikS0FxaN" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 disabled" target="_blank">Registration is now closed.</a>
 
 **Your registration will be completed only after you receive a confirmation email from the organizers.**
 
