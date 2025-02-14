@@ -9,6 +9,8 @@ This repository contains source of training material for the `Impact Workshop 20
 
 ## Development environment
 
+Should work for Windows, Linux and Mac.
+
 ### Install Conda
 
 If you have not installed Conda, you should first install Miniconda. Miniconda is a minimal installer for Conda. You can install Miniconda by following these steps:
@@ -36,7 +38,35 @@ For Windows users, follow these steps to install Miniconda:
 
 ### Creating Conda environment
 
-Create Conda environment with *CasADi 3.6.5* + *Rockit* + *Impact* using the following command:
+### Figure out a desired PYTHON_VERSION
+ * If you don't plan on using Matlab, pick PYTHON_VERSION=3.12
+ * If you do plan on using Matlab, choose the highest version that is listed for your Matlab version at https://nl.mathworks.com/support/requirements/python-compatibility.html
+
+### Open a Conda shell
+  ⚠️ On Windows, pick "Anaconda Prompt", not "Anacoda PowerShell Prompt"
+
+### Create the Conda environment for the workshop
+
+```
+conda create --name workshop_dirac python=<PYTHON_VERSION> pip=23.0
+conda activate workshop_dirac
+conda install -y --channel conda-forge cmake clang lld llvmdev ninja
+pip install casadi>=3.6.7 rockit-meco==0.5.0 impact-meco==0.3.2
+```
+
+## Verify the environment
+
+4. Run `python torque_obstacle_avoidance_acados.py`
+ 
+  You'll be queried "Do you wish to set up Tera renderer automatically?" Answer 'y'.
+
+  This file should run succesfully and show some plots.
+
+  Getting the error "CMake was unable to find a build program corresponding to Ninja" or "No CMAKE_RC_COMPILER could be found"?
+  That means that you opened the wrong shell on Windows. Please see 2.
+
+
+
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
