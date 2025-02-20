@@ -48,5 +48,5 @@ jobs:
         shell: bash -l {0}
         run: |
           conda activate workshop_dirac
-          python test.py
+          echo 'y' | python test.py
 
