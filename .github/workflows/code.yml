@@ -37,9 +37,19 @@ jobs:
         run: |
           conda create -n workshop_dirac python=${{ matrix.python-version }} -y --channel=defaults --override-channels
           conda activate workshop_dirac
+          conda install -y --channel conda-forge cmake clang lld llvmdev ninja
+          echo "Conda environment activated"
+        if: "!contains(matrix.os, 'windows')"
+
+      - name: Activate conda environment
+        shell: bash -l {0}
+        run: |
+          conda create -n workshop_dirac python=${{ matrix.python-version }} -y --channel=defaults --override-channels
+          conda activate workshop_dirac
           conda install -y --channel conda-forge cmake clang=15 lld=15 llvmdev=15 ninja
           echo "Conda environment activated"
-
+        if: contains(matrix.os, 'windows')
+        
       - name: Install dependencies
         shell: bash -l {0}
         run: |
