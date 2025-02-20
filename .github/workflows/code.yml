@@ -35,7 +35,7 @@ jobs:
       - name: Activate conda environment
         shell: bash -l {0}
         run: |
-          conda create -n workshop_dirac python=${{ matrix.python-version }} -y
+          conda create -n workshop_dirac python=${{ matrix.python-version }} -y --channel=defaults --override-channels
           conda activate workshop_dirac
           conda install -y --channel conda-forge cmake clang lld llvmdev ninja
           echo "Conda environment activated"
