@@ -48,15 +48,17 @@ For Windows users, follow these steps to install Miniconda:
 ### Create the Conda environment for the workshop
 
 ```
-conda create --name workshop_dirac python=<PYTHON_VERSION> pip=23.0
+conda create --name workshop_dirac python=<PYTHON_VERSION> -y --channel=defaults --override-channels
 conda activate workshop_dirac
-conda install -y --channel conda-forge cmake clang lld llvmdev ninja
+(Only Windows) $ conda install -y --channel conda-forge cmake clang=15 lld=15 llvmdev=15 ninja 
+((Only linux and Mac) $ conda install -y --channel conda-forge cmake clang lld llvmdev ninja
+
 pip install -r requirements.txt
 ```
 
 ## Verify the environment
 
-4. Run `python torque_obstacle_avoidance_acados.py`
+4. Run `python test.py`
  
   You'll be queried "Do you wish to set up Tera renderer automatically?" Answer 'y'.
 
