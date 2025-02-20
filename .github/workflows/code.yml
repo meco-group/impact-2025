@@ -15,9 +15,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
-
+        os: [ubuntu-latest, windows-latest, macos-latest, macos-13]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+        exclude:
+          - os: "macos-latest"
+            python-version: "3.8"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
