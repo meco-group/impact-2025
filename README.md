@@ -62,7 +62,7 @@ pip install -r requirements.txt
  
   You'll be queried "Do you wish to set up Tera renderer automatically?" Answer 'y'.
 
-  This file should run succesfully and show some plots.
+  This file should run succesfully.
 
   Getting the error "CMake was unable to find a build program corresponding to Ninja" or "No CMAKE_RC_COMPILER could be found"?
   That means that you opened the wrong shell on Windows. Please see 2.
