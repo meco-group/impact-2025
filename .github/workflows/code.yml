@@ -1,0 +1,52 @@
+name: Test Software on Multiple OS and Python Versions
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Test on ${{ matrix.os }} with Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          auto-update-conda: true
+          python-version: ${{ matrix.python-version }}
+          channels: conda-forge,defaults
+          use-only-tar-bz2: true
+
+      - name: Activate conda environment
+        shell: bash -l {0}
+        run: |
+          conda create -n workshop_dirac python=${{ matrix.python-version }} -y
+          conda activate workshop_dirac
+          conda install -y --channel conda-forge cmake clang lld llvmdev ninja
+          echo "Conda environment activated"
+
+      - name: Install dependencies
+        shell: bash -l {0}
+        run: |
+          conda activate workshop_dirac
+          pip install -r requirements.txt
+
+      - name: Run tests
+        shell: bash -l {0}
+        run: |
+          conda activate workshop_dirac
+          python test.py
+

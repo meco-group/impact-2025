@@ -51,7 +51,7 @@ For Windows users, follow these steps to install Miniconda:
 conda create --name workshop_dirac python=<PYTHON_VERSION> pip=23.0
 conda activate workshop_dirac
 conda install -y --channel conda-forge cmake clang lld llvmdev ninja
-pip install casadi>=3.6.7 rockit-meco==0.5.0 impact-meco==0.3.2
+pip install -r requirements.txt
 ```
 
 ## Verify the environment
