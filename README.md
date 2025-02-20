@@ -51,7 +51,7 @@ For Windows users, follow these steps to install Miniconda:
 conda create --name workshop_dirac python=<PYTHON_VERSION> -y --channel=defaults --override-channels
 conda activate workshop_dirac
 (Only Windows) $ conda install -y --channel conda-forge cmake clang=15 lld=15 llvmdev=15 ninja 
-((Only linux and Mac) $ conda install -y --channel conda-forge cmake clang lld llvmdev ninja
+(Only linux and Mac) $ conda install -y --channel conda-forge cmake clang lld llvmdev ninja
 
 pip install -r requirements.txt
 ```
