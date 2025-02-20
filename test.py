@@ -66,4 +66,6 @@ tsb, Torque1sol = sol.sample(furuta_pendulum.Torque1, grid='control')
 
 print(theta1sol)
 
+assert abs(theta1sol[0]-(-0.52359878))<1e-5
+
 
