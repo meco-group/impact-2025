@@ -1,0 +1,58 @@
+# Simplified Futura Pendulum Model for tutorial
+# Cazzolato, B. S., & Prime, Z. (2011). On the dynamics of the furuta pendulum. Journal of Control Science and Engineering, 2011(1), 528341.
+# equation 33 and 34
+equations:
+  inline:
+    ode:
+      theta1: dtheta1
+      theta2: dtheta2
+      dtheta1: ((((((m2*l1)*l2)*cos(theta2))/(((J1+(m2*sq(l1)))*J2)-sq((((m2*l1)*l2)*cos(theta2)))))*((((sin(theta2)*((m2*g)*l2))+(sin(theta2)*(((m2*l1)*l2)*(dtheta1*dtheta2))))-(dtheta1*(((m2*l1)*l2)*(sin(theta2)*dtheta2))))+(b2*dtheta2)))-((J2/(((J1+(m2*sq(l1)))*J2)-sq((((m2*l1)*l2)*cos(theta2)))))*((b1*dtheta1)-((dtheta2*(((m2*l1)*l2)*(sin(theta2)*dtheta2)))+Torque1))))
+      dtheta2: ((((((m2*l1)*l2)*cos(theta2))/(((J1+(m2*sq(l1)))*J2)-sq((((m2*l1)*l2)*cos(theta2)))))*((b1*dtheta1)-((dtheta2*(((m2*l1)*l2)*(sin(theta2)*dtheta2)))+Torque1)))-(((J1+(m2*sq(l1)))/(((J1+(m2*sq(l1)))*J2)-sq((((m2*l1)*l2)*cos(theta2)))))*((((sin(theta2)*((m2*g)*l2))+(sin(theta2)*(((m2*l1)*l2)*(dtheta1*dtheta2))))-(dtheta1*(((m2*l1)*l2)*(sin(theta2)*dtheta2))))+(b2*dtheta2))))
+    outputs:
+      pivot_x: L1*cos(theta1)
+      pivot_y: L1*sin(theta1)
+      pivot_z: z1
+      ee_x: L1*cos(theta1) - L2*sin(theta1)*sin(theta2)
+      ee_y: L1*sin(theta1) + L2*cos(theta1)*sin(theta2)
+      ee_z: z1 - L2*cos(theta2)
+      T: 1/2*(J1+m2*l1**2)*dtheta1**2+1/2*J2*dtheta2**2+m2*l1*l2*cos(theta2)*dtheta1*dtheta2
+      V: m2*g*l2*(1-cos(theta2))
+differential_states: 
+  - name: theta1
+  - name: theta2
+  - name: dtheta1
+  - name: dtheta2
+controls: 
+  - name: Torque1
+outputs: 
+  - name: pivot_x
+  - name: pivot_y
+  - name: pivot_z
+  - name: ee_x
+  - name: ee_y
+  - name: ee_z
+  - name: T
+  - name: V
+parameters:
+  - name: b1
+    value: 0.0001 # N m s
+  - name: b2
+    value: 0.00028 # N m s
+    
+constants:
+  inline:
+  # parameters from the section 8 of the paper
+    L1:    0.278 # m
+    L2:    0.300 # m
+    l1:    0.150 # m
+    l2:    0.148 # m
+    m1:    0.300 # kg
+    m2:    0.075 # kg
+    J1:    0.0248 # kg m^2
+    J2:    0.00386 # kg m^2
+    J0h: J1+m1*l1**2+m2*L1**2
+    J1h: J1+m1*l1**2
+    J2h: J2+m2*l2**2
+    g:     9.81  # m/s^2
+    Torque2: 0.0 # N m
+    z1:    0.600 # m # height of the pivot point
