@@ -11,6 +11,8 @@ This repository contains source of training material for the `Impact Workshop 20
 
 Should work for Windows, Linux and Mac.
 
+### Clone/download this repository
+
 ### Install Conda
 
 If you have not installed Conda, you should first install Miniconda. Miniconda is a minimal installer for Conda. You can install Miniconda by following these steps:
