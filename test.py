@@ -5,7 +5,7 @@ Furuta-pendulum
 from impact import *
 import casadi as ca
 import numpy as np
-
+import subprocess
 
 import rockit
 
@@ -52,8 +52,10 @@ mpc.method(method)
 # Solve
 sol = mpc.solve()
 
-# mpc.export('torq_obs_aca',short_output=True)
-
+mpc.export('torq_obs_aca',short_output=True)
+env = dict(os.environ)
+env["MPLBACKEND"] = "Agg"
+assert subprocess.run(["python","hello_world_torq_obs_aca.py"],env=env,cwd="torq_obs_aca_build_dir").returncode==0
 
 # Sample a state/control trajectory
 tsa, theta1sol = sol.sample(furuta_pendulum.theta1, grid='control')
@@ -122,7 +124,10 @@ mpc.method(MultipleShooting(N=50,M=1,intg='rk'))
 sol = mpc.solve()
 
 
-# mpc.export('torq_obs_fatrop',short_output=True)
+mpc.export('torq_obs_fatrop',short_output=True)
+env = dict(os.environ)
+env["MPLBACKEND"] = "Agg"
+assert subprocess.run(["python","hello_world_torq_obs_fatrop.py"],env=env,cwd="torq_obs_fatrop_build_dir").returncode==0
 
 
 # Sample a state/control trajectory
