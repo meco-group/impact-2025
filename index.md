@@ -50,7 +50,7 @@ Lunch will be provided during the workshop.
 
 <a href="https://forms.office.com/e/P4ikS0FxaN" type="button" class="btn btn-primary d-lg-inline-block my-lg-0 disabled" target="_blank">Registration is now closed.</a>
 
-**Your registration will be completed only after you receive a confirmation email from the organizers.**
+**A confirmation email has been sent by the organizers to all participants.**
 
 ***
 

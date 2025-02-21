@@ -1,9 +1,9 @@
 dates: February 27, 2025 at noon
-place: KU Leuven, Mechanical Engineering, Room De Groote, Leuven
+place: KU Leuven, Quadrivium, room Arithmetica (QDV.02.0100), Celestijnenlaan 200, 3001 Heverlee
 buttons:
   - text: Workshop's GitHub
     url: https://github.com/meco-group/impact-2025
-    disabled: true
+    disabled: false
   - text: CasADi
     url: https://github.com/casadi/casadi
     disabled: false
