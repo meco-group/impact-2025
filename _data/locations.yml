@@ -3,10 +3,10 @@ content:
   description: Map of workshop venue
   text: KU Leuven, Quadrivium, room Arithmetica (QDV.02.0100), Celestijnenlaan 200, 3001 Heverlee
 
-center: 50.8628922, 4.6748939,66
+center: 50.8628922, 4.6748939
 zoom: 15
 
 markers:
   - title: KU Leuven, Quadrivium, room Arithmetica (QDV.02.0100), Celestijnenlaan 200, 3001 Heverlee
     text: Location of the workshop
-    latlng: 50.8628922, 4.6748939,66
+    latlng: 50.8628922, 4.6748939
