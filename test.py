@@ -79,7 +79,7 @@ for solver, solver_options in [("fatrop",{
         "common_options":{"final_options":{"cse":True}},
         "jit": False,
         "jit_options": {"flags":["-O3","-ffast-math"]}
-    }),("ipopt",{}),("sqpmethod",{"qpsol": "osqp"})]:
+    }),("ipopt",{}),("sqpmethod",{"qpsol": "osqp"}),("sleqp",{})]:
 
     mpc = MPC(T=3.0)
 
