@@ -25,9 +25,6 @@ from sklearn.model_selection import train_test_split
 import casadi
 import rockit
 import impact
-
-import rockit
-
 rockit.GlobalOptions.set_cmake_flags(['-G','Ninja','-DCMAKE_C_COMPILER=clang','-DCMAKE_CXX_COMPILER=clang'])
 
 import Controllers
