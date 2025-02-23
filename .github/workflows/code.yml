@@ -14,7 +14,6 @@ jobs:
         exclude:
           - os: "macos-14"
             python-version: "3.8"
-        exclude:
           - os: "macos-13"
             python-version: "3.13" # 'torch' unavailable
     steps:
