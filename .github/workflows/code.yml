@@ -50,15 +50,15 @@ jobs:
           conda activate workshop_dirac
           pip install -r requirements.txt
 
-      - name: Run tests
+      - name: IMPACT tests
         shell: bash -l {0}
         run: |
           conda activate workshop_dirac
           echo 'y' | python test.py
 
-      - name: Run tests
+      - name: NN_MPC tests
         shell: bash -l {0}
         run: |
           conda activate workshop_dirac
           cd NN_MPC
-          python nmpc_tutorial.py
+          python nnmpc_tutorial.py
