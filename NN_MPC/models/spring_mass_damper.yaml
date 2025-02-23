@@ -1,0 +1,18 @@
+equations:
+  inline:
+    ode:
+      pos: dpos
+      dpos: (u/m)-(dpos*b/m)-(((pos**3)*stiff)/m)-g
+differential_states: 
+  - name: pos
+  - name: dpos
+controls: 
+  - name: F
+constants:
+  inline:
+    stiff: 5.0 # N/m
+    m: 1.0 # kg
+    b: 0.1 # Ns/m
+    g: 9.81 # m/s^2
+
+
