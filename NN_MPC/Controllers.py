@@ -35,11 +35,11 @@ class MPC(impact.MPC, Controller):
     bound_inputs : np.ndarray   = None
     OCP_mode     : bool         = False
     planned_control : np.ndarray= None
-    solver_options = { "ipopt.print_level":0, 
+    solver_options = { "ipopt.print_level":5, 
                     "print_time":0, 
                     "expand": True,
                     "verbose": False,
-                    "print_time": False,
+                    "print_time": True,
                     "error_on_fail": False,
                     "ipopt": {"sb":"yes", "tol": 1e-8, "max_iter":1e3}}
     
@@ -125,8 +125,7 @@ class MPC(impact.MPC, Controller):
 
         try:
             # solve mpc (while preventing annoing prints)
-            with open(os.devnull, 'w') as f, contextlib.redirect_stdout(f):
-                sol = self.solve()
+            sol = self.solve()
             
             ts, X = sol.sample(model.x, grid='integrator')
             ts, U = sol.sample(model.u, grid='integrator')
