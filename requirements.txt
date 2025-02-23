@@ -1,7 +1,9 @@
+# Tutorial on Impact 
 casadi>=3.6.7
 rockit-meco==0.6.0
 impact-meco==0.4.1
 
+# NN-MPC
 pandas
 torch
 plotly

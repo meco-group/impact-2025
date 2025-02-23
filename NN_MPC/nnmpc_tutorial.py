@@ -26,6 +26,10 @@ import casadi
 import rockit
 import impact
 
+import rockit
+
+rockit.GlobalOptions.set_cmake_flags(['-G','Ninja','-DCMAKE_C_COMPILER=clang','-DCMAKE_CXX_COMPILER=clang'])
+
 import Controllers
 import Utility
 importlib.reload(Controllers)
@@ -57,7 +61,7 @@ importlib.reload(Utility)
 # Options
 generate_mpc_data = True            # generate new MPC data, if False load saved ones
 train_nn          = True            # train new NNMPC, if False load saved one
-save_outputs      = True           # save outputs simulations and NN model
+save_outputs      = False           # save outputs simulations and NN model
 
 # parameters for mass-spring-damper
 model_name = 'spring_mass_damper'       # name of the model (corresponding yaml file must be in the models folder)
@@ -84,6 +88,7 @@ sim.dt = 0.025                      # sampling time [s]
 # Init
 sims_path = "results/"+model_name+"_MPC_sims.npz"
 NN_path = "results/"+model_name+"_NNMPC"
+os.makedirs("results",exist_ok=True)
 
 mpc = Controllers.MPC()
 model = mpc.add_model(model_name, "models/"+model_name+".yaml")
