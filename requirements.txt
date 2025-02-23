@@ -1,3 +1,11 @@
 casadi>=3.6.7
 rockit-meco==0.6.0
 impact-meco==0.4.1
+
+pandas
+torch
+plotly
+scikit-learn
+ipykernel
+nbformat
+tqdm 
