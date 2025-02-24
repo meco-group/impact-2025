@@ -70,7 +70,7 @@ pip install -r requirements.txt
   That means that you opened the wrong shell on Windows. Please see 2.
 
   ⚠️ Getting the error "lld-link: error: could not open 'kernel32.lib': no such file or directory"?
-  Probably solved with installing https://visualstudio.microsoft.com/visual-cpp-build-tools/
+  Probably solved with installing https://visualstudio.microsoft.com/visual-cpp-build-tools/ and re-opening the Anaconda Prompt.
   We are currently investigating this error with someone who reported it to us.
   We are aiming for a solution that does not require installing someting extra.
 
