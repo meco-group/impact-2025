@@ -66,10 +66,12 @@ pip install -r requirements.txt
 
   This file should run succesfully.
 
-  Getting the error "CMake was unable to find a build program corresponding to Ninja" or "No CMAKE_RC_COMPILER could be found"?
+  ⚠️ Getting the error "CMake was unable to find a build program corresponding to Ninja" or "No CMAKE_RC_COMPILER could be found"?
   That means that you opened the wrong shell on Windows. Please see 2.
 
-  Getting the error "lld-link: error: could not open 'kernel32.lib': no such file or directory"? We are currently looking for a solution..
+  ⚠️ Getting the error "lld-link: error: could not open 'kernel32.lib': no such file or directory"?
+  Probably solved with installing https://visualstudio.microsoft.com/visual-cpp-build-tools/
+  We are currently investigating this error with someone who reported it to us.
 
 
 
