@@ -17,7 +17,7 @@ x_current = mpc.parameter('x_current',furuta.nx)
 x_final = mpc.parameter('x_final',furuta.nx)
 
 # Objectives
-mpc.add_objective(mpc.sum(furuta.Torque1**2 ))
+mpc.add_objective(mpc.sum(furuta.dtheta2**2 ))
 
 # Initial and final state constraints
 mpc.subject_to(mpc.at_t0(furuta.x)==x_current)
@@ -61,11 +61,16 @@ from pylab import *
 [ts, theta2sol] = sol.sample(furuta.theta2, grid='control')
 [ts_fine, theta2sol_fine] = sol.sample(furuta.theta2, grid='integrator',refine=10)
 
+[ts, dtheta2sol] = sol.sample(furuta.dtheta2, grid='control')
+[ts_fine, dtheta2sol_fine] = sol.sample(furuta.dtheta2, grid='integrator',refine=10)
+
 print("theta2sol",theta2sol)
 
 figure()
 plot(ts, theta2sol,'b.')
 plot(ts_fine, theta2sol_fine,'b')
+plot(ts, dtheta2sol,'g.')
+plot(ts_fine, dtheta2sol_fine,'g')
 xlabel('Time [s]')
 ylabel('theta2')
 
