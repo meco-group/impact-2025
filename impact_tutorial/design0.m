@@ -51,7 +51,7 @@ mpc.set_value(x_final, [pi/3,0,0,0]);
 mpc.method(rockit.MultipleShooting('N',25,'intg','heun'));
 
 % Solve
-sol = mpc.solve_limited();
+sol = mpc.solve();
 
 
 

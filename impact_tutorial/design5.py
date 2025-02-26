@@ -5,7 +5,7 @@ import rockit
 import impact
 
 rockit.GlobalOptions.set_cmake_flags(['-G','Ninja','-DCMAKE_C_COMPILER=clang','-DCMAKE_CXX_COMPILER=clang'])
-rockit.GlobalOptions.set_cmake_build_type('Debug')
+rockit.GlobalOptions.set_cmake_build_type('Release')
 
 mpc = impact.MPC(T=0.5)
 
@@ -17,7 +17,7 @@ x_current = mpc.parameter('x_current',furuta.nx)
 x_final = mpc.parameter('x_final',furuta.nx)
 
 # Objectives
-mpc.add_objective(mpc.sum(furuta.Torque1**2 ))
+mpc.add_objective(mpc.sum(furuta.dtheta2**2 ))
 
 # Initial and final state constraints
 mpc.subject_to(mpc.at_t0(furuta.x)==x_current)
@@ -26,21 +26,8 @@ mpc.subject_to(mpc.at_tf(furuta.x)==x_final)
 # Path constraints
 mpc.subject_to(-40 <= (furuta.dtheta1 <= 40 ), include_first=False, include_last=False)
 mpc.subject_to(-40 <= (furuta.dtheta2 <= 40 ), include_first=False, include_last=False)
-
+mpc.subject_to(-30 <= (mpc.der(furuta.dtheta2) <= 30 ), include_first=False, include_last=False)
 mpc.subject_to(-ca.pi<= (furuta.theta1 <= ca.pi), include_first=False)
-
-# Solver choice
-options = {
-        "expand": True,
-        "structure_detection": "auto",
-        "fatrop.tol": 1e-4,
-        "print_time": False,
-        "fatrop.print_level": 0,
-        "debug": False,
-        "common_options":{"final_options":{"cse":True}},
-    }
-mpc.solver("fatrop", options)
-
 
 mpc.set_value(x_current, [-np.pi/3,0,0,0])
 mpc.set_value(x_final, [np.pi/3,0,0,0])
@@ -49,7 +36,8 @@ ee = ca.vertcat(furuta.ee_x, furuta.ee_y, furuta.ee_z)
 pivot = ca.vertcat(furuta.pivot_x, furuta.pivot_y, furuta.pivot_z)
 
 # Transcription choice
-mpc.method(MultipleShooting(N=25,intg='heun'))
+method = external_method('acados', N=25,qp_solver='PARTIAL_CONDENSING_HPIPM',nlp_solver_max_iter=200,hessian_approx='EXACT',regularize_method = 'CONVEXIFY',integrator_type='ERK',nlp_solver_type='SQP',qp_solver_cond_N=5)
+mpc.method(method)
 
 # Solve
 sol = mpc.solve()
@@ -59,18 +47,23 @@ from pylab import *
 
 
 [ts, theta2sol] = sol.sample(furuta.theta2, grid='control')
-[ts_fine, theta2sol_fine] = sol.sample(furuta.theta2, grid='integrator',refine=10)
+[ts_fine, theta2sol_fine] = sol.sample(furuta.theta2, grid='control')
+
+[ts, dtheta2sol] = sol.sample(furuta.dtheta2, grid='control')
+[ts_fine, dtheta2sol_fine] = sol.sample(furuta.dtheta2, grid='control')
 
 print("theta2sol",theta2sol)
 
 figure()
 plot(ts, theta2sol,'b.')
 plot(ts_fine, theta2sol_fine,'b')
+plot(ts, dtheta2sol,'g.')
+plot(ts_fine, dtheta2sol_fine,'g')
 xlabel('Time [s]')
 ylabel('theta2')
 
 [ts, Torque1sol] = sol.sample(furuta.Torque1, grid='control')
-[ts_fine, Torque1sol_fine] = sol.sample(furuta.Torque1, grid='integrator',refine=10)
+[ts_fine, Torque1sol_fine] = sol.sample(furuta.Torque1, grid='control')
 
 figure()
 plot(ts, Torque1sol,'b.')
@@ -81,13 +74,13 @@ ylabel('Torque [N]')
 figure()
 
 
-[_,ee_sol_fine] = sol.sample(ee,grid='integrator',refine=10)
+[_,ee_sol_fine] = sol.sample(ee,grid='control')
 [_,ee_sol] = sol.sample(ee,grid='control')
 [_,pivot_sol] = sol.sample(pivot,grid='control')
 
 
-[_,theta1_sol] = sol.sample(furuta.theta1,grid='integrator',refine=10)
-[_,theta2_sol] = sol.sample(furuta.theta2,grid='integrator',refine=10)
+[_,theta1_sol] = sol.sample(furuta.theta1,grid='control')
+[_,theta2_sol] = sol.sample(furuta.theta2,grid='control')
 
 xlabel("theta1")
 ylabel("theta2")
