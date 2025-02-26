@@ -1,12 +1,6 @@
 name: Test Software on Multiple OS and Python Versions
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [push, pull_request]
 
 jobs:
   test:
@@ -20,6 +14,8 @@ jobs:
         exclude:
           - os: "macos-14"
             python-version: "3.8"
+          - os: "macos-13"
+            python-version: "3.13" # 'torch' unavailable
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -32,7 +28,7 @@ jobs:
           channels: conda-forge,defaults
           use-only-tar-bz2: true
 
-      - name: Activate conda environment
+      - name: Activate conda environment (non-Windows)
         shell: bash -l {0}
         run: |
           conda create -n workshop_dirac python=${{ matrix.python-version }} -y --channel=defaults --override-channels
@@ -41,7 +37,7 @@ jobs:
           echo "Conda environment activated"
         if: "!contains(matrix.os, 'windows')"
 
-      - name: Activate conda environment
+      - name: Activate conda environment (Windows)
         shell: bash -l {0}
         run: |
           conda create -n workshop_dirac python=${{ matrix.python-version }} -y --channel=defaults --override-channels
@@ -56,9 +52,15 @@ jobs:
           conda activate workshop_dirac
           pip install -r requirements.txt
 
-      - name: Run tests
+      - name: IMPACT tests
         shell: bash -l {0}
         run: |
           conda activate workshop_dirac
           echo 'y' | python test.py
 
+      - name: NN_MPC tests
+        shell: bash -l {0}
+        run: |
+          conda activate workshop_dirac
+          cd NN_MPC
+          python nnmpc_tutorial.py
