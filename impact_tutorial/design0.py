@@ -36,7 +36,7 @@ options = {
         "fatrop.tol": 1e-4,
         "print_time": False,
         "fatrop.print_level": 0,
-        "debug": True,
+        "debug": False,
         "common_options":{"final_options":{"cse":True}},
     }
 mpc.solver("fatrop", options)
@@ -68,6 +68,15 @@ plot(ts, theta2sol,'b.')
 plot(ts_fine, theta2sol_fine,'b')
 xlabel('Time [s]')
 ylabel('theta2')
+
+[ts, Torque1sol] = sol.sample(furuta.Torque1, grid='control')
+[ts_fine, Torque1sol_fine] = sol.sample(furuta.Torque1, grid='integrator',refine=10)
+
+figure()
+plot(ts, Torque1sol,'b.')
+plot(ts_fine, Torque1sol_fine,'b')
+xlabel('Time [s]')
+ylabel('Torque [N]')
 
 figure()
 
