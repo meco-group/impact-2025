@@ -1,3 +1,15 @@
+# Tutorial on Impact 
 casadi>=3.6.7
 rockit-meco==0.6.3
 impact-meco==0.4.7
+
+# NN-MPC
+pandas
+torch
+plotly
+scikit-learn
+ipykernel
+nbformat
+tqdm 
+
+numpy<2 ; platform_system == "Darwin" and platform_machine == "x86_64"
