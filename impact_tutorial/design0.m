@@ -38,7 +38,7 @@ options.expand = true;
 options.structure_detection = 'auto';
 options.fatrop.tol = 1e-4;
 options.fatrop.print_level = 0;
-options.debug = true;
+options.debug = false;
 options.print_time = false;
 options.common_options.final_options.cse = true;
 
@@ -58,6 +58,50 @@ sol = mpc.solve_limited();
 [ts, theta2sol] = sol.sample(furuta.theta2, 'grid','control');
 [ts_fine, theta2sol_fine] = sol.sample(furuta.theta2, 'grid','integrator','refine',10);
 
+format long
 theta2sol
 
+figure;
+plot(ts, theta2sol, 'b.');
+hold on;
+plot(ts_fine, theta2sol_fine, 'b');
+xlabel('Time [s]');
+ylabel('theta2');
 
+
+[ts, Torque1sol] = sol.sample(furuta.Torque1, 'grid','control');
+[ts_fine, Torque1sol_fine] = sol.sample(furuta.Torque1, 'grid','integrator','refine',10);
+
+
+figure;
+plot(ts, Torque1sol, 'b.');
+hold on;
+plot(ts_fine, Torque1sol_fine, 'b');
+xlabel('Time [s]');
+ylabel('Torque1');
+
+figure;
+
+[~, ee_sol_fine] = sol.sample(ee, 'grid', 'integrator', 'refine', 10);
+[~, ee_sol] = sol.sample(ee, 'grid', 'control');
+[~, pivot_sol] = sol.sample(pivot, 'grid', 'control');
+
+[~, theta1_sol] = sol.sample(furuta.theta1, 'grid', 'integrator', 'refine', 10);
+[~, theta2_sol] = sol.sample(furuta.theta2, 'grid', 'integrator', 'refine', 10);
+
+plot(theta1_sol, theta2_sol);
+xlabel('theta1');
+ylabel('theta2');
+axis square;
+
+figure;
+
+plot(ee_sol_fine(:,2), ee_sol_fine(:,3));
+hold on;
+plot(ee_sol(:,2), ee_sol(:,3), 'k.');
+
+for k = 1:size(ee_sol, 1)
+    plot([ee_sol(k,2), pivot_sol(k,2)], [ee_sol(k,3), pivot_sol(k,3)], 'k-');
+end
+
+axis square;
