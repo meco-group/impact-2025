@@ -50,6 +50,7 @@ mpc.method(method)
 
  * In Simulink, load `library_tutorial.slx` that you'll find generated in `tutorial_build_dir`
  * Follow instructions by the tutor
- 
-
+   
+## Step 7: Deploy on Speedgoat
+ * Follow instructions by the tutor
 
