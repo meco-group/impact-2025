@@ -33,13 +33,7 @@ outputs:
   - name: ee_z
   - name: T
   - name: V
-parameters:
-  - name: b1
-    value: 0.0001 # N m s
-  - name: b2
-    # value: 0.00028 # N m s
-    value: 0.00013347   # N m s => 1.3347e-04
-    
+
 constants:
   inline:
   # parameters from the section 8 of the paper
@@ -60,3 +54,5 @@ constants:
     g:     9.81  # m/s^2
     Torque2: 0.0 # N m
     z1:    0.1825 # m # height of the pivot point
+    b1: 0.0001 # N m s
+    b2: 0.00013347   # N m s => 1.3347e-04
