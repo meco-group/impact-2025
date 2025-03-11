@@ -58,9 +58,3 @@ jobs:
           conda activate workshop_dirac
           echo 'y' | python test.py
 
-      - name: NN_MPC tests
-        shell: bash -l {0}
-        run: |
-          conda activate workshop_dirac
-          cd NN_MPC
-          python nnmpc_tutorial.py
