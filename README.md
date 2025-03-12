@@ -5,7 +5,7 @@
 This repository contains source of training material for the `Impact Workshop 2025`. The topics covered are:
 - Recap of Nonlinear Programming, Optimal Control and Model Predictive Control
 - Tutorial 1: Using Impact to rapidly specify, prototype and deploy model predictive controllers
-- Tutorial 2: Neural Network-MPC
+- Tutorial 2: Neural Network-MPC (If you would like to have access to this material, please contact Branimir Mrak (branimir.mrak <at> flandersmake.be))
 
 ## Development environment
 
